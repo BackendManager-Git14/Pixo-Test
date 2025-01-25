@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixo | Discussions</title>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="discussion.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lusitana:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="sidebar">
+        <!-- Logo Section -->
+        <img src="../../Visuals/pixo_logo.png" class="logo">
+  
+        <!-- Navigation Links -->
+        <a href="#" class="nav-link">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z"/></svg>
+            <span class="nav-link-text">Home</span>
+        </a>
+        <a href="#" class="nav-link">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m300-300 280-80 80-280-280 80-80 280Zm180-120q-25 0-42.5-17.5T420-480q0-25 17.5-42.5T480-540q25 0 42.5 17.5T540-480q0 25-17.5 42.5T480-420Zm0 340q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q133 0 226.5-93.5T800-480q0-133-93.5-226.5T480-800q-133 0-226.5 93.5T160-480q0 133 93.5 226.5T480-160Zm0-320Z"/></svg>
+            <span class="nav-link-text">Explore</span>
+        </a>
+        <button class="drop-down-button" onclick="toggleMenu(this)">
+            <i class="fas fa-users"></i>
+            <span class="nav-link-text">Community</span>
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
+        </button>
+        <ul class="sub-menu">
+            <div>
+                <li>
+                    <a href="../communities.html" class="nav-link" id="sub-link">
+                        <span class="nav-link-text">Personal</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/Communities/Recents/communities-recents.html" class="nav-link" id="sub-link">
+                        <span class="nav-link-text">Recents</span>
+                    </a>
+                </li>
+            </div>
+        </ul>
+        <button class="drop-down-button" onclick="toggleMenu(this)">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M120-440v-320q0-33 23.5-56.5T200-840h240v400H120Zm240-80Zm160-320h240q33 0 56.5 23.5T840-760v160H520v-240Zm0 720v-400h320v320q0 33-23.5 56.5T760-120H520ZM120-360h320v240H200q-33 0-56.5-23.5T120-200v-160Zm240 80Zm240-400Zm0 240Zm-400-80h160v-240H200v240Zm400-160h160v-80H600v80Zm0 240v240h160v-240H600ZM200-280v80h160v-80H200Z"/></svg> 
+            <span class="nav-link-text">Pages</span>
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
+        </button>
+        <ul class="sub-menu">
+            <div>
+                <li>
+                    <a href="#" class="nav-link" id="sub-link">
+                        <span class="nav-link-text">Contact Us</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link" id="sub-link">
+                        <span class="nav-link-text">Our Team</span>
+                    </a>
+                </li>
+            </div>
+        </ul>
+  
+        <!-- Profile Section -->
+        <div class="profile-section">
+            <div style="display: flex;gap: 10px;">
+                <div class="profile-image">
+                    <img src="../../Visuals/user.png" style="width: 100%;height: 100%;border-radius: 50%;" alt="">
+                  </div>
+                  <div class="profile-name">Ranveer Kapoor</div>
+                </div>
+
+                <button onclick="showOptions(this)" class="drop-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed" style="cursor: pointer;"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"></path></svg>
+                </button>
+            </div>
+  
+        <!-- Action Buttons -->
+        <div class="profile-actions">
+            <div style="overflow: hidden;">
+                <a href="#" class="action-btn">
+                    <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"/><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/><g id="SVGRepo_iconCarrier"> <path d="M21.2799 6.40005L11.7399 15.94C10.7899 16.89 7.96987 17.33 7.33987 16.7C6.70987 16.07 7.13987 13.25 8.08987 12.3L17.6399 2.75002C17.8754 2.49308 18.1605 2.28654 18.4781 2.14284C18.7956 1.99914 19.139 1.92124 19.4875 1.9139C19.8359 1.90657 20.1823 1.96991 20.5056 2.10012C20.8289 2.23033 21.1225 2.42473 21.3686 2.67153C21.6147 2.91833 21.8083 3.21243 21.9376 3.53609C22.0669 3.85976 22.1294 4.20626 22.1211 4.55471C22.1128 4.90316 22.0339 5.24635 21.8894 5.5635C21.7448 5.88065 21.5375 6.16524 21.2799 6.40005V6.40005Z" stroke="#e3694a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/> <path d="M11 4H6C4.93913 4 3.92178 4.42142 3.17163 5.17157C2.42149 5.92172 2 6.93913 2 8V18C2 19.0609 2.42149 20.0783 3.17163 20.8284C3.92178 21.5786 4.93913 22 6 22H17C19.21 22 20 20.2 20 18V13" stroke="#e3694a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/> </g></svg>
+                    <span class="nav-link-text">Edit</span>
+                  </a>
+                  <a href="#" class="action-btn">
+                    <svg width="24px" height="24px" viewBox="-2.4 -2.4 28.80 28.80" fill="none" xmlns="http://www.w3.org/2000/svg" transform="rotate(180)" stroke="#e3694a"><g id="SVGRepo_bgCarrier" stroke-width="0"/><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/><g id="SVGRepo_iconCarrier"> <path d="M3.25 12C3.25 7.16751 7.16751 3.25 12 3.25C16.4943 3.25 20.1973 6.63843 20.6935 11H13.4142L14.7071 9.70711C15.0976 9.31658 15.0976 8.68342 14.7071 8.29289C14.3166 7.90237 13.6834 7.90237 13.2929 8.29289L10.2929 11.2929C9.90237 11.6834 9.90237 12.3166 10.2929 12.7071L13.2929 15.7071C13.6834 16.0976 14.3166 16.0976 14.7071 15.7071C15.0976 15.3166 15.0976 14.6834 14.7071 14.2929L13.4142 13H20.6935C20.1973 17.3616 16.4943 20.75 12 20.75C7.16751 20.75 3.25 16.8325 3.25 12Z" fill="#e3694a"/> </g></svg>
+                    <span class="nav-link-text">Log Out</span>
+                  </a>
+            </div>
+        </div>
+    </div>
+    <div class="container main">
+        <div class="top-bar">
+            <img src="../../Visuals/meadow-8071932_1280.jpg" width="150px" height="85px" style="border-radius: 12px;margin-top: 8px;" alt="Community-banner">
+            <div class="text-section" style="height: 70px;margin-top: 25px;">
+                <h4 class="community-title" style="color: white;font-weight: 600;margin-bottom: 10px;">Floriphile</h4>
+                <h5 class="owner-mention" style="color: #e3694a;font-size: 0.8rem;">@server_user528</h5>
+                </div>
+        </div>
+        <div class="community-content-section" style="display: flex;">
+            <div class="topic-panel">
+                <div class="topic-card">
+                    <img src="../../Visuals/nature-3082832_1280.jpg" alt="topic-image" width="100%" height="100px" />
+                    <div class="text-content">
+                        Can we agree that we got golden era of the nature?
+                    </div>
+                </div>
+                <hr>
+                <div class="topic-card">
+                    <img src="../../Visuals/sakura-flower.jpg" alt="topic-image" width="100%" height="100px" />
+                    <div class="text-content">
+                        Sakura - Everybody's dream to see these flowers ...
+                    </div>
+                </div>
+                <hr>
+            </div>
+            <div class="discussion-panel">
+                <div class="user-topic">
+                    <div class="content">
+                        <img src="../../Visuals/nature-3082832_1280.jpg" alt="topic-image" style="height: 270px;width: 100%;border-radius: 12px;margin-bottom: 1rem;"/>
+                        <div class="text-content">
+                            <div class="heading" style="font-size: 1.2rem;color: white;font-weight: 600;margin-bottom: 0rem;">Can we agree that we got golden era of the nature?</div>
+                            <div class="details" style="display: none;color: rgba(255, 255, 255, 0.5);font-size: 0.9rem;">
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem in ut voluptatem suscipit reiciendis repudiandae eos eligendi, similique voluptate hic.
+
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, culpa!
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile-image">
+                        <img src="../../Visuals/Ellipse 11 (2).png" style="width: 40px;height: 35px;border-radius: 50%;" alt="">
+                    </div>
+
+                </div>
+                <div class="user-discussion" style="width: 540px;padding: 0px 20px;">
+                    <div class="comment-card">
+                        <img src="../../Visuals/Ellipse 11 (4).png" style="width: 40px;height: 35px;border-radius: 50%;" alt="">
+                        <div class="comment-data">
+                            <h5 class="username-id" style="color: #e3694a;font-size: 0.8rem;">@mai_admin_hoo^10</h5>
+                            <p class="comment-content" style="margin: 0;font-size: 0.8rem;">
+                                I can asure that it is golden era but for short term of life .
+                            </p>
+                        </div>
+                    </div>
+                    <div class="comment-card">
+                        <img src="../../Visuals/user.png" style="width: 40px;height: 35px;border-radius: 50%;" alt="">
+                        <div class="comment-data">
+                            <h5 class="username-id" style="color: #e3694a;font-size: 0.8rem;">@binary_user414</h5>
+                            <p class="comment-content" style="margin: 0;font-size: 0.8rem;">
+                                Its hard to believe that we are the last generation to see these type of wonders .
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="discussion-input"></div> -->
+                <div class="interactive-menu">
+                    <i class="fa-solid fa-ellipsis" id="toggle-button-icon" onclick="toggleOptionsMenu(event)"></i>
+                    <div class="interaction-buttons">
+                        <div class="button">
+                            <i class="fa-regular fa-thumbs-up"></i>
+                            <span class="button-text">230</span>
+                            <!-- For javascript <i class="fa-solid fa-thumbs-up">Active Icon</i> -->
+                        </div>
+                        <div class="button">
+                            <i class="fa-regular fa-thumbs-down"></i>
+                            <span class="button-text">10</span>
+                            <!-- For javascript <i class="fa-solid fa-thumbs-down">Active Icon</i> -->
+                        </div>
+                        <div class="button" onclick="toggleContent(event)" id="toggle-text">
+                            <i class="fa-solid fa-up-right-and-down-left-from-center" id="expand-icon"></i>
+                            <span class="button-text" id="expand-icon-text">Expand</span>
+                            <!-- For javascript <i class="fa-solid fa-down-left-and-up-right-from-center"></i>-->
+                        </div>
+                        <div class="button" onclick="toggleDiscussion(event)">
+                            <i class="fa-solid fa-square-plus"></i>
+                            <span class="button-text">Discuss</span>
+                        </div>
+                    </div>
+                    <div class="discussion-input">
+                            <textarea type="text" name="discussion-input-field" class="discussion-field" id="discussion-input-field" placeholder="Your Thoughts ..."></textarea> <!--interactive-menu : width : 590px -->
+                            <i class="fa-solid fa-xmark" style="color: #e3694a;font-size: 1.4rem;position: absolute;right: 85px;bottom: 15px;cursor: pointer;" onclick="toggleClose(event)"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="user-panel">
+                <div class="head-title" style="font-size: 1.5rem;text-align: center;color: #e3694a;font-weight: 600;margin-bottom: 10px;">Users</div>
+                <div class="user-data">
+                    <img src="../../Visuals/Ellipse 11 (3).png" style="width: 40px;height: 40px;border-radius: 50%;" alt="">
+                    <p class="username" style="color: white;margin: 10px 0px 0px 0px;">Anthony ki Saas</p>
+                </div>
+                <div class="user-data">
+                    <img src="../../Visuals/Ellipse 11 (4).png" style="width: 40px;height: 40px;border-radius: 50%;" alt="">
+                    <p class="username" style="color: white;margin: 10px 0px 0px 0px;">Binod ka Baap</p>
+                </div>
+                <div class="user-data">
+                    <img src="../../Visuals/Ellipse 11 (2).png" style="width: 40px;height: 40px;border-radius: 50%;" alt="">
+                    <p class="username" style="color: white;margin: 10px 0px 0px 0px;">Tubelight Waali</p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <script src="discussion.js"></script>
+</body>
+
+</html>

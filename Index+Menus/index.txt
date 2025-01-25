@@ -1,0 +1,39 @@
+Index Page
+figma link:
+https://www.figma.com/design/xVtvXft8NJdml3LR01CJtS/Untitled?node-id=0-1&t=KwWT5XNMRlj5pX91-1
+
+Colors:	White ( #FFFFFF )
+	Orange ( #E3694A )
+
+Fonts: 	Primary Fonts (Applicable on all)
+	Lusitana
+
+background
+	50% in black color
+
+Pixo Logo
+	Top Center (Slightly big in size then header)
+
+Buttons align vertically center according to logo
+
+radio buttons 
+	glow effect only on current slide radio button 
+	
+Slide 1:
+
+"Welcome to" font- bilbo swash caps
+"PIXO" font- Lusitana, bold, character spacing 15px, size 128px
+subtitle font- Lusitana, character spacing 5px, size 24px
+
+Slide 2:
+heading font : lusitana
+in-cards font : roboto - bold, roboto
+profile pic stroke : 3px
+card color : Orange ( #E3694A ) , 50% opacity
+
+Slide 3: Blog (animation : 3 blog will appear one after other with fade effect)
+heading font : lusitana
+in-cards font : roboto - bold, roboto
+profile pic stroke : 5px
+card color : light Gray( #E0E0E0 ) , 50% opacity
+

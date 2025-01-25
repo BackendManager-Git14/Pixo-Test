@@ -1,0 +1,10 @@
+PIXO Theme
+Colors:
+Primary - White - #FFFFFF
+Secondary - Orange - #e3694a
+Background color - #312125
+light text color(gray) -  #676369
+
+Font:
+Headings: Lusitana
+Content: Roboto
